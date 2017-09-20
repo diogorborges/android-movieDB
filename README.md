@@ -34,6 +34,6 @@ Using the Clean Architecture Use Cases in RxJava.
   - Search a movie by the name
   
 ## TODO
-  - Fix Unit Tests after changing Use cases in RxJava
+  - Fix Unit Tests after changing the Callback Use cases to RxJava
   - Concat RxJava Api Requests
   
