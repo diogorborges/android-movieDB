@@ -5,7 +5,6 @@ import android.content.Context;
 import com.diogorborges.themoviedbsample.BuildConfig;
 import com.diogorborges.themoviedbsample.R;
 import com.diogorborges.themoviedbsample.data.remote.ApiService;
-import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -31,12 +30,6 @@ public class NetModule {
 
     @Provides
     @Singleton
-    StethoInterceptor provideStethoInterceptor() {
-        return new StethoInterceptor();
-    }
-
-    @Provides
-    @Singleton
     Interceptor provideAuthenticationInterceptor() {
         return new Interceptor() {
             @Override
@@ -59,13 +52,11 @@ public class NetModule {
 
     @Provides
     @Singleton
-    OkHttpClient provideOkHttpClient(StethoInterceptor stethoInterceptor,
-                                     Interceptor authenticationInterceptor) {
+    OkHttpClient provideOkHttpClient(Interceptor authenticationInterceptor) {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
 
         return new OkHttpClient.Builder()
-                .addNetworkInterceptor(stethoInterceptor)
                 .addInterceptor(authenticationInterceptor)
                 .addInterceptor(loggingInterceptor)
                 .connectTimeout(60, TimeUnit.SECONDS)
