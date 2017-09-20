@@ -8,18 +8,18 @@ Utilizes a simple MVP pattern, similar to [https://github.com/googlesamples/andr
 Using the Clean Architecture Use Cases in RxJava.
 
 ## Requirements
-GitHub
-Android Studio
-Minimum API: 9
+  - GitHub
+  - Android Studio
+  - Minimum API: 9
 
 ## Libraries Used
-Dagger 2;
-Retrofit 2; 
-OkHttp3;
-Glide;
-Butterknife;
-Stetho;
-RxJava.
+  - Dagger 2
+  - Retrofit 2
+  - OkHttp3
+  - Glide
+  - Butterknife
+  - Stetho
+  - RxJava
 
 ## Features
 
@@ -32,4 +32,8 @@ RxJava.
   
 ### Search Component
   - Search a movie by the name
+  
+## TODO
+  - Fix Unit Tests after changing Use cases in RxJava
+  - Concat RxJava Api Requests
   
