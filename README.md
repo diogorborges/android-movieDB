@@ -1,23 +1,39 @@
-# TheMovieDB
+# TheMovieDBSample
 Android App using The Movie DB API
 
 # Description
-Shows a list of the latest Movies sorted by popularity, which could be drilled down to view the Detail.
+Shows a list of the latest Movies sorted by upcoming movies, which could be drilled down to view the Detail.
 
-Utilizes a simple MVP pattern, similar to [https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger) but without the use of Fragments. Implemented Unit Tests for the Presenter.
+Utilizes a simple MVP pattern, similar to [https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger) but without the use of Fragments. 
+Using the Clean Architecture Use Cases in RxJava.
 
 ## Requirements
-Minimum API: 9
+  - GitHub
+  - Android Studio
+  - Minimum API: 9
 
 ## Libraries Used
-Dagger 2.8, Retrofit 2.1, Glide, Butterknife, Stetho, Mockito/JUnit
+  - Dagger 2
+  - Retrofit 2
+  - OkHttp3
+  - Glide
+  - Butterknife
+  - Stetho
+  - RxJava
 
 ## Features
 
-### Movie List (Title, Image, Popularity)
+### Movie List (Title, Poster, Genres, Release Date)
   - Pull to Refresh
   - Endless Scroll
 
-### Movie Detail (Overview, Genres, Duration, Language)
-  - View in Custom Chrome Tab via "Book the Movie" Button
+### Movie Detail (Genres, Duration, Language, Date, Title, Poster, Overview)
+  - View in Custom Chrome Tab via "More Info" Button
+  
+### Search Component
+  - Search a movie by the name
+  
+## TODO
+  - Fix Unit Tests after changing Use cases in RxJava
+  - Concat RxJava Api Requests
   
