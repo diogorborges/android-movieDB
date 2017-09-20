@@ -13,13 +13,12 @@ Using the Clean Architecture Use Cases in RxJava.
   - Minimum API: 9
 
 ## Libraries Used
-  - Dagger 2
-  - Retrofit 2
-  - OkHttp3
-  - Glide
-  - Butterknife
-  - Stetho
-  - RxJava
+  - Dagger 2 - Used to provide dependency injection
+  - Retrofit 2 / OkHttp3 - HTTP is a modern way to applications request/response API
+  - Glide - An image loading and caching library for Android focused on smooth scrolling
+  - Butterknife - Bind Android views and callbacks to fields and methods
+  - Jackson - Used for parsing JSON 
+  - RxJava - An library for composing asynchronous and event-based programs using observable sequences for the Java VM
 
 ## Features
 
@@ -34,6 +33,6 @@ Using the Clean Architecture Use Cases in RxJava.
   - Search a movie by the name
   
 ## TODO
-  - Fix Unit Tests after changing Use cases in RxJava
+  - Fix Unit Tests after changing the Callback Use cases to RxJava
   - Concat RxJava Api Requests
   
